@@ -15,19 +15,19 @@ Interview process generally consists of online test and F2F interviews. Online t
 8. System performance(CPU, memory, Disk and Network)
 9. Linux boot process
 10. Mutex vs semaphore
-11. Troubleshooting experiences(laptop is slow or wifi connectivity is slow)
-12. Segmentation and Paging
-13. Cache and its types, comparison with memory
-14. Basic linux commands
+11. Segmentation and Paging
+12. Cache and its types, comparison with memory
+13. Basic linux commands
+14. Disk scheduling algorithms
 
 ### Computer Networks
 1. OSI model: complete understanding of each layer
 2. Domain Name System
-3. Subnetting and calculation
+3. Subnetting and related calculations
 4. All Routing Protocols
-5. Hub, Switch and Router
+5. Hub, Switch and Router[All network devices]
 6. TCP and UDP comparison
-7. TCP 3way handshake
+7. TCP handshake
 8. Firewall
 9. FTP, HTTP, SMTP, POP3, IMAP, HTTPS
 10. URL, URI and URN
@@ -39,5 +39,12 @@ Interview process generally consists of online test and F2F interviews. Online t
 16. What happens in background when you hit google.com on web browser
 17. SSL handshake
 18. NAT
+19. HTTP error codes
+20. Fragmentation
+
+### Example Troubleshooting Scenarios
+1. How can I protect my laptop?
+2. Laptop is slow
+3. Wifi connectivity is slow
 
 Other than this you can expect questions around amazon leadership principles and your experiences related to them.
