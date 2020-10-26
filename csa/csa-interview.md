@@ -1,5 +1,10 @@
-# CLOUD SUPPORT ENGINEER INTERVIEW PREPARATION FOR FRESHERS
-The interview mostly focused on domain knowledge of Operating System and Computer Networks. If you're a fresher, basic cloud knowledge studied in college curriculum should be enough. Apart from this personal projects can give you some edge over technologies you explored in college.
+# Cloud Support Engineer/DevOps Support Engineer INTERVIEW PREPARATION
+The below guide should prove to be useful if you're interested in Cloud Support/DevOps profile in any organisation. The profile designation can vary from company to company but the gist is you work on customer problems, troubleshoot and provide a solution.
+
+The interview mostly focused on domain knowledge of Operating System and Computer Networks. If you're a fresher, basic cloud knowledge studied in college curriculum should be enough. Apart from this personal projects can give you some edge over technologies you explored in college. 
+
+In case you're experienced candidate, questions can be specific to previous domain you've worked on.
+For example: If you're applying in database domain, then you should know troubleshooting in databases, best practices one should follow, kind of databases and how to choose between multiple options, etc.
 
 Interview process generally consists of online test and F2F interviews. Online test can contains MCQ on core CS concepts and aptitude. Apart from this there could be programming questions with easy/medium difficulty.
 
@@ -11,11 +16,11 @@ Interview process generally consists of online test and F2F interviews. Online t
 4. Linux run levels
 5. Producer consumer problem
 6. Reader writer's problem
-7. Virtual memory and how it works
+7. Virtual memory and how it works, eg. How will a 5GB game will work on PC with 2GB RAM
 8. System performance(CPU, memory, Disk and Network)
 9. Linux boot process
 10. Mutex vs semaphore
-11. Segmentation and Paging
+11. Segmentation and Paging[Memory management]
 12. Cache and its types, comparison with memory
 13. Basic linux commands
 14. Disk scheduling algorithms
@@ -25,7 +30,7 @@ Interview process generally consists of online test and F2F interviews. Online t
 2. Domain Name System
 3. Subnetting and related calculations
 4. All Routing Protocols
-5. Hub, Switch and Router[All network devices]
+5. Hub, Switch, Router, Bridge[All network devices]
 6. TCP and UDP comparison
 7. TCP handshake
 8. Firewall
@@ -41,10 +46,17 @@ Interview process generally consists of online test and F2F interviews. Online t
 18. NAT
 19. HTTP error codes
 20. Fragmentation
+21. Packet segmentation
 
 ### Example Troubleshooting Scenarios
 1. How can I protect my laptop?
-2. Laptop is slow
+2. PC is slow(troubleshooting steps can vary based on type of machine and OS)
 3. Wifi connectivity is slow
+4. Website is accessible by entering DNS but not with uri(e.g. working with 52.22.22.22 but not with google.com)
 
-Other than this you can expect questions around amazon leadership principles and your experiences related to them.
+### Programming Questions
+As this is DevOps role, the questions should be of easy difficulty level.
+In my judgement, this should be easy question - swap two numbers with help of only two variables
+
+### Behavioral Questions
+Apart from technical questions, you should prepare for behavioral questions on how you'll handle or react on different kind of situations.
