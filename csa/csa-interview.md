@@ -34,20 +34,20 @@ Interview process generally consists of online test and F2F interviews. Online t
 I prepared for operating system from video tutorials by Prof. P.K. Biswas, IIT KGP
 
 ### Computer Networks
-1. OSI model: complete understanding of each layer
-2. Domain Name System
+1. OSI model: complete understanding of each layer, protocols, security in each layer
+2. Domain Name System(DNS and address resolution)
 3. Subnetting and related calculations
 4. All Routing Protocols
-5. Hub, Switch, Router, Bridge[All network devices]
-6. TCP and UDP comparison
-7. TCP handshake
+5. Hub, Switch, Router, Bridge, Gateway[All network devices working, their differences and use-cases where used]
+6. TCP and UDP comparison in detail
+7. TCP handshake, connection establish and termination
 8. Firewall
-9. FTP, HTTP, SMTP, POP3, IMAP, HTTPS
+9. FTP, HTTP, SMTP, POP3, IMAP, HTTPS, ICMP
 10. URL, URI and URN
 11. Virtual Private Network(VPN)
 12. Dynamic Host Configuration Protocol(DHCP and DORA)
 13. Sockets
-14. IPv4 and IPv6
+14. IPv4 and IPv6 differences, datagram headers
 15. Private and Public IP address
 16. What happens in background when you hit google.com on web browser
 17. SSL handshake
@@ -55,6 +55,12 @@ I prepared for operating system from video tutorials by Prof. P.K. Biswas, IIT K
 19. HTTP error codes
 20. Fragmentation
 21. Packet segmentation
+22. MAC
+23. Network routing
+24. Traceroute, Telnet
+25. DDOS
+26. Virtualization and its types
+27. Network security
 
 ### Example Troubleshooting Scenarios
 1. How can I protect my laptop?
