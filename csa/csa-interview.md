@@ -21,9 +21,17 @@ Interview process generally consists of online test and F2F interviews. Online t
 9. Linux boot process
 10. Mutex vs semaphore
 11. Segmentation and Paging[Memory management]
-12. Cache and its types, comparison with memory
+12. Page faults, how it's handled?
+12. Cache and its types, comparison with memory, differences in RAM and ROM
 13. Basic linux commands
-14. Disk scheduling algorithms
+14. CPU scheduling algorithms 
+15. Disk scheduling algorithms
+15. Process and threads. What are they? what are the differences?
+16. zombie process, what will you detect? How to handle?
+17. Deadlock, necessary conditions for deadlock, its prevention strategy
+18. Handling Thrashing
+
+I prepared for operating system from video tutorials by Prof. P.K. Biswas, IIT KGP
 
 ### Computer Networks
 1. OSI model: complete understanding of each layer
@@ -60,3 +68,6 @@ In my judgement, this should be easy question - swap two numbers with help of on
 
 ### Behavioral Questions
 Apart from technical questions, you should prepare for behavioral questions on how you'll handle or react on different kind of situations.
+
+### Tips and Suggestions
+* I combined multiple topics in above list of topics. In interviews, generally you're evaluated on how well you understand the system and not just memorizing the definitions.
