@@ -61,6 +61,7 @@ I prepared for operating system from video tutorials by Prof. P.K. Biswas, IIT K
 25. DDOS
 26. Virtualization and its types
 27. Network security
+28. Port numbers for different protocols
 
 ### Example Troubleshooting Scenarios
 1. How can I protect my laptop?
