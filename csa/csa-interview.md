@@ -8,7 +8,9 @@ For example: If you're applying in database domain, then you should know trouble
 
 Interview process generally consists of online test and F2F interviews. Online test can contains MCQ on core CS concepts and aptitude. Apart from this there could be programming questions with easy/medium difficulty.
 
-## Sample Questions
+### YouTube video link: https://youtu.be/kfWqpq4BvSQ
+
+## Top Topics for preparation
 ### Operating System
 1. File permissions, managing users and groups(chmod, chown command)
 2. Hard link and Soft link
@@ -35,7 +37,9 @@ Interview process generally consists of online test and F2F interviews. Online t
 21. System startup tasks
 22. How to automate system? example cron jobs
 
-I prepared for operating system from video tutorials by Prof. P.K. Biswas, IIT KGP
+References for operating system preparation
+* Video tutorials by Prof. P.K. Biswas, IIT KGP
+* GeeksForGeeks Operating System guide
 
 ### Computer Networks
 1. OSI model: complete understanding of each layer, protocols, security in each layer
