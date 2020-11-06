@@ -1,4 +1,4 @@
-# Cloud Support Engineer/DevOps Support Engineer INTERVIEW PREPARATION
+# Cloud Support Engineer/DevOps Support Engineer /Technical Solutions Engineer INTERVIEW PREPARATION
 The below guide should prove to be useful if you're interested in Cloud Support/DevOps profile in any organisation. The profile designation can vary from company to company but the gist is you work on customer problems, troubleshoot and provide a solution.
 
 The interview mostly focused on domain knowledge of Operating System and Computer Networks. If you're a fresher, basic cloud knowledge studied in college curriculum should be enough. Apart from this personal projects can give you some edge over technologies you explored in college. 
@@ -78,13 +78,16 @@ References for operating system preparation
 3. Wifi connectivity is slow or any network connectivity issues
 4. Website is accessible by entering DNS but not with uri(e.g. working with 52.22.22.22 but not with google.com)
 5. System not able to bootup
-6. Unable to login into the system
+6. Unable to login into the system/Unable to SSH into the server
 7. System error troubleshooting. How will you check system logs? commands to find error snippets?
 
 
 ### Programming Questions
 As this is DevOps role, the questions should be of easy difficulty level.
 In my judgement, this should be easy question - swap two numbers with help of only two variables
+
+### Online Test
+It generally involves questions around basic CS concepts, aptitude and easy/medium difficulty programming questions.
 
 ### Behavioral Questions
 Apart from technical questions, you should prepare for behavioral questions on how you'll handle or react on different kind of situations.
