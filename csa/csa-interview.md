@@ -70,15 +70,15 @@ References for operating system preparation
 26. Virtualization and its types
 27. Network security
 28. Port numbers for different protocols
-29. Broadcase domain
+29. Broadcast domain
 
 ### Example Troubleshooting Scenarios
-1. How can I protect my laptop?
-2. PC is slow(troubleshooting steps can vary based on type of machine and OS). Detailed analysis on system performance improvement - CPU, memory, Disk, network or any other system hardware/software
+1. [How can I protect my laptop?/How to secure a server?](https://youtu.be/o7dOJPvMjuY)
+2. [PC/Server is slow(troubleshooting steps can vary based on type of machine and OS). Detailed analysis on system performance improvement - CPU, memory, Disk, network or any other system hardware/software](https://youtu.be/7S_PBdDFvAA)
 3. Wifi connectivity is slow or any network connectivity issues
 4. Website is accessible by entering DNS but not with uri(e.g. working with 52.22.22.22 but not with google.com)
 5. System not able to bootup
-6. Unable to login into the system/Unable to SSH into the server
+6. [Unable to login into the system/Unable to SSH into the server](https://youtu.be/fQXpjzrVqNA)
 7. System error troubleshooting. How will you check system logs? commands to find error snippets?
 
 
