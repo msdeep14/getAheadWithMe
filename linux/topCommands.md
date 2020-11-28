@@ -1,0 +1,2 @@
+# Top linux commands
+In interviews you're expected to know basic linux commands to perform day to day activities. Along with command, you should be aware about the options you can use with this command and the proper explanation of generated output. Here is the list of commands you can quickly get along, make sure you also try them once in your terminal for better understanding of each and every command. 
