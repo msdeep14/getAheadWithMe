@@ -77,10 +77,11 @@ References for operating system preparation
 2. [PC/Server is slow(troubleshooting steps can vary based on type of machine and OS). Detailed analysis on system performance improvement - CPU, memory, Disk, network or any other system hardware/software](https://youtu.be/7S_PBdDFvAA)
 3. Wifi connectivity is slow or any network connectivity issues
 4. Website is accessible by entering DNS but not with uri(e.g. working with 52.22.22.22 but not with google.com)
-5. System not able to bootup
+5. [System not able to bootup](https://youtu.be/hj0TCZqZBRg)
 6. [Unable to login into the system/Unable to SSH into the server](https://youtu.be/fQXpjzrVqNA)
 7. System error troubleshooting. How will you check system logs? commands to find error snippets?
 
+**Troubleshooting playlist [link here](https://www.youtube.com/watch?v=fQXpjzrVqNA&list=PLGPe9uvn5fMZJTdscLalRyNA1mlm5ZOrM)**
 
 ### Programming Questions
 As this is DevOps role, the questions should be of easy difficulty level.
