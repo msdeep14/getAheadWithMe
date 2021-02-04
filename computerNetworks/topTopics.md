@@ -27,7 +27,7 @@ Along with topic name, I've also included link where you can read about it. Furt
 14. [IPv4 and IPv6 differences?](https://www.guru99.com/difference-ipv4-vs-ipv6.html), [IPv4](https://www.geeksforgeeks.org/introduction-and-ipv4-datagram-header/), [IPv4 and IPv6 more details](https://www.cisco.com/en/US/technologies/tk648/tk872/technologies_white_paper0900aecd8054d37d.html), [IPv6](https://www.geeksforgeeks.org/internet-protocol-version-6-ipv6-header/)
 15. [tracert](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert), [netstat](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat), [ping](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ping), [ipconfig](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig)/[ifconfig](https://linux.die.net/man/8/ifconfig), [telnet](https://www.javatpoint.com/computer-network-telnet), [telnet command](https://www.javatpoint.com/linux-telnet-command)
 16. [Gateways?](https://www.tutorialspoint.com/what-are-gateways-in-computer-network)
-17. [CSMA/CD and CSMA/CA?](https://www.geeksforgeeks.org/carrier-sense-multiple-access-csma/)
+17. [subnetting, subnet mask?](https://www.guru99.com/subnetting-subnet-mask.html), [link2 on this](https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/), [link3 more details including CIDR](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking)
 18. [Encryption, what is it? what's the importance?](https://www.javatpoint.com/computer-network-privacy)
 19. [proxy server? what is the role of proxy server?](https://www.geeksforgeeks.org/what-is-proxy-server/)
 20. [Network devices - Hub, switch and router?](https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/)
@@ -39,12 +39,12 @@ Along with topic name, I've also included link where you can read about it. Furt
 26. [Packet segmentation?](https://en.wikipedia.org/wiki/Packet_segmentation)
 27. [Error control, Flow control](https://www.javatpoint.com/data-link-controls), [Error control techniques?](https://www.geeksforgeeks.org/error-control-in-data-link-layer/)
 28. [SMTP?](https://www.javatpoint.com/simple-mail-transfer-protocol), [POP3](https://www.javatpoint.com/pop-protocol), [differences](https://www.hostinger.in/tutorials/email/pop3-imap-smtp-protocols-explained-ports)
-29. [peer-to-peer network](https://in.indeed.com/career-advice/career-development/peer-to-peer-network), [P2P and server based network?](https://afteracademy.com/blog/what-are-peer-to-peer-networks-and-server-based-networks)
+29. [CSMA/CD and CSMA/CA?](https://www.geeksforgeeks.org/carrier-sense-multiple-access-csma/)
 30. [Routing Information Protocol - RIP](https://www.geeksforgeeks.org/routing-information-protocol-rip/), [How routing works on internet?](https://medium.com/@User3141592/how-does-the-internet-work-edc2e22e7eb8), [link2 on this](https://cromwell-intl.com/networking/routing.html)
-31. [Ethernet?](https://www.geeksforgeeks.org/local-area-network-lan-technologies/)
-32. [subnet mask?](https://www.guru99.com/subnetting-subnet-mask.html), [link2 on this](https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/)
-33. [Data encapsulation?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking), [link2 on this](https://docs.oracle.com/cd/E19455-01/806-0916/ipov-32/index.html)
-34. [Network Interface Card - NIC](https://www.javatpoint.com/network-interface-card)?
+31. [Data encapsulation?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking), [link2 on this](https://docs.oracle.com/cd/E19455-01/806-0916/ipov-32/index.html)
+32. [Network Interface Card - NIC](https://www.javatpoint.com/network-interface-card)?
+33. [Ethernet?](https://www.geeksforgeeks.org/local-area-network-lan-technologies/)
+34. [peer-to-peer network](https://in.indeed.com/career-advice/career-development/peer-to-peer-network), [P2P and server based network?](https://afteracademy.com/blog/what-are-peer-to-peer-networks-and-server-based-networks)
 35. [Network virtualization](https://blog.gigamon.com/2018/01/04/network-virtualization-optimize/)
 36. [Open Shortest Path First - OSPF?](https://www.javatpoint.com/ospf-protocol)
 
