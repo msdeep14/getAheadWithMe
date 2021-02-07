@@ -6,7 +6,7 @@ Along with topic name, I've also included link where you can read about it. Furt
 
 #### :blue_heart: :blue_heart: If you find this repository useful, do share it with the larger group. For more such content, don't forget to subscribe to my [YouTube channel : MsDeep Singh](https://www.youtube.com/channel/UC5GDb4oVOCxUESy0dZOieIw)
 
-#### YouTube video link on how you can study from this list in best possible way: will update soon []()
+#### [YouTube video link on how you can study from this list in best possible way](https://youtu.be/aUVe2pWICZI)
 
 
 ### List of topics
