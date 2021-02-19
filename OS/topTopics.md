@@ -27,13 +27,14 @@ Along with topic name, I've also included link where you can read about it. Do p
 15. [Segmentation?](https://www.geeksforgeeks.org/segmentation-in-operating-system/)
 16. [Page replacement algorithms?](https://www.geeksforgeeks.org/page-replacement-algorithms-in-operating-systems/), [link2](https://www.javatpoint.com/os-numerical-on-lru-fifo-and-optimal)
 17. [File systems?](https://www.guru99.com/file-systems-operating-system.html)
-18. [Disk scheduling algorithm](https://www.geeksforgeeks.org/disk-scheduling-algorithms/)
-19. [linux commands](https://github.com/msdeep14/getAheadWithMe/blob/main/linux/topCommands.md)
-20. [Linux run levels](https://www.geeksforgeeks.org/run-levels-linux/)
-21. [Cache?](https://www.tutorialspoint.com/What-is-caching) [cache vs RAM?](https://www.geeksforgeeks.org/difference-between-ram-and-cache/)
-22. [Thrashing?](https://www.thecrazyprogrammer.com/2019/02/thrashing-in-operating-system-os.html)
-23. [daemon process?](https://notes.shichao.io/apue/ch13/)
-24. [Zombie & orphan process?](https://www.geeksforgeeks.org/zombie-and-orphan-processes-in-c/), [link2 on how to kill zombie process](https://stackoverflow.com/questions/16944886/how-to-kill-zombie-process)
+18. [File permissions](https://www.tutorialspoint.com/unix/unix-file-permission.htm)
+19. [Disk scheduling algorithm](https://www.geeksforgeeks.org/disk-scheduling-algorithms/)
+20. [linux commands](https://github.com/msdeep14/getAheadWithMe/blob/main/linux/topCommands.md)
+21. [Linux run levels](https://www.geeksforgeeks.org/run-levels-linux/)
+22. [Cache?](https://www.tutorialspoint.com/What-is-caching) [cache vs RAM?](https://www.geeksforgeeks.org/difference-between-ram-and-cache/)
+23. [Thrashing?](https://www.thecrazyprogrammer.com/2019/02/thrashing-in-operating-system-os.html)
+24. [daemon process?](https://notes.shichao.io/apue/ch13/)
+25. [Zombie & orphan process?](https://www.geeksforgeeks.org/zombie-and-orphan-processes-in-c/), [link2 on how to kill zombie process](https://stackoverflow.com/questions/16944886/how-to-kill-zombie-process)
 
 ### Social Media links
 ##### :point_right: Instagram: https://www.instagram.com/msdeep14/
