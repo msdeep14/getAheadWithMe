@@ -40,7 +40,7 @@ In interviews you're expected to know basic linux commands to perform day to day
 ## For general operations
 1. cat
 2. echo
-3. whoami, w
+3. whoami
 4. tail
 5. head
 6. less
