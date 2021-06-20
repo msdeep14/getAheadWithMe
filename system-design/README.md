@@ -1,0 +1,6 @@
+# SYSTEM DESIGN WITH msdeep
+This series of videos will help you to grasp system design concepts. The course is structured to start from basic system design concepts and then move towards how will you design advanced real life systems.
+
+## Resources 
+1. YT channel - https://www.youtube.com/c/MsDeepSingh
+2. system design playlist - will update soon...
