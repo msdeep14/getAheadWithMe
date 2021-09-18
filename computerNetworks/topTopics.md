@@ -47,6 +47,7 @@ Along with topic name, I've also included link where you can read about it. Furt
 34. [peer-to-peer network](https://in.indeed.com/career-advice/career-development/peer-to-peer-network), [P2P and server based network?](https://afteracademy.com/blog/what-are-peer-to-peer-networks-and-server-based-networks)
 35. [Network virtualization](https://blog.gigamon.com/2018/01/04/network-virtualization-optimize/)
 36. [Open Shortest Path First - OSPF?](https://www.javatpoint.com/ospf-protocol)
+37. [What happens when you type a URL in the browser and press enter?](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a)
 
 ### Social Media links
 ##### :point_right: Instagram: https://www.instagram.com/msdeep14/
