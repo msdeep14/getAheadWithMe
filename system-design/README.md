@@ -10,6 +10,7 @@ This series of videos will help you to grasp system design concepts. The course 
 2. Netflix - What happens when you press play? - https://youtu.be/j_oWdvGG0po
 3. TinyURL/ URL Shortener Service - https://youtu.be/HxjOFsyAl3w
 4. Distributed Logging & Metrics System - https://youtu.be/QLlYAt04k9k
+5. Notification Service - https://youtu.be/SSLRov9Ye7g
 
 
 ## System Design Concepts 
@@ -35,3 +36,8 @@ This series of videos will help you to grasp system design concepts. The course 
 20. Error vs Fault vs Failure - https://youtu.be/Hdk5KMp97vU
 21. Short Polling vs Long Polling vs Web Sockets - https://youtu.be/MpNX-1ApfC4
 22. Message Queues - https://youtu.be/m7aF88g36cM
+
+
+## Global Outages Discussion
+1. AWS Outage - https://youtu.be/q9c-ZtZ-HzY
+2. Atlassian Outage - https://youtu.be/MyyZw0QuCNo
