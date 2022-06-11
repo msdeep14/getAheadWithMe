@@ -37,6 +37,7 @@ This series of videos will help you to grasp system design concepts. The course 
 20. Error vs Fault vs Failure - https://youtu.be/Hdk5KMp97vU
 21. Short Polling vs Long Polling vs Web Sockets - https://youtu.be/MpNX-1ApfC4
 22. Message Queues - https://youtu.be/m7aF88g36cM
+23. Functional vs Non-Functional requirements - https://youtu.be/s-IGmZyJr_k
 
 
 ## Global Outages Discussion
