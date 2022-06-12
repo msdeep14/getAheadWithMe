@@ -12,6 +12,7 @@ This series of videos will help you to grasp system design concepts. The course 
 4. Distributed Logging & Metrics System - https://youtu.be/QLlYAt04k9k
 5. Notification Service - https://youtu.be/SSLRov9Ye7g
 6. Instagram Newsfeed Service - https://youtu.be/Eku7d8kyQxs
+7. Instagram Stories/Snapchat Stories/Whatsapp Stories - https://youtu.be/rPz1RZfkdwU
 
 
 ## System Design Concepts 
