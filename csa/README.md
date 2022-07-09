@@ -25,7 +25,7 @@ Interview process generally consists of online test and F2F interviews. Online t
 11. Segmentation and Paging[Memory management]
 12. Page faults, how it's handled?
 12. Cache and its types, comparison with memory, differences in RAM and ROM
-13. Basic linux commands
+13. Basic linux commands - [video and commands details](https://github.com/msdeep14/getAheadWithMe/blob/main/linux/topCommands.md)
 14. CPU scheduling algorithms 
 15. Disk scheduling algorithms
 15. Process and threads. What are they? what are the differences?
@@ -81,7 +81,8 @@ References for operating system preparation
 6. [Unable to login into the system/Unable to SSH into the server](https://youtu.be/fQXpjzrVqNA)
 7. System error troubleshooting. How will you check system logs? commands to find error snippets?
 
-**Troubleshooting playlist [link here](https://www.youtube.com/watch?v=fQXpjzrVqNA&list=PLGPe9uvn5fMZJTdscLalRyNA1mlm5ZOrM)**
+#### **Troubleshooting Series YouTube playlist [link here](https://www.youtube.com/watch?v=fQXpjzrVqNA&list=PLGPe9uvn5fMZJTdscLalRyNA1mlm5ZOrM)**
+#### **Troubleshooting Series in English - [PDF and video details here](https://github.com/msdeep14/getAheadWithMe/tree/main/TroubleshootingSeries)**
 
 ### Programming Questions
 As this is DevOps role, the questions should be of easy difficulty level.
