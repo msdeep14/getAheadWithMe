@@ -16,6 +16,11 @@ This series of videos will help you to grasp system design concepts. The course 
 8. India Toll Tax System - Fastag System Design - https://youtu.be/UaxRj84HiXM
 9. Stackoverflow | Q&A website - https://youtu.be/qJf7UZOx-7k
 10. Google Calendar - https://youtu.be/EYOuYQWPgvM
+11. TrueCaller - https://youtu.be/oAz29Pukv2E
+
+## Large Scale System Analysis
+1. How DISCORD stores billions of messages? - https://youtu.be/EGHfvV_cLKQ
+2. How DISCORD indexes billions of messages? - https://youtu.be/CSnd5TlToIA
 
 
 ## System Design Concepts 
