@@ -21,6 +21,7 @@ This series of videos will help you to grasp system design concepts. The course 
 ## Large Scale System Analysis
 1. How DISCORD stores billions of messages? - https://youtu.be/EGHfvV_cLKQ
 2. How DISCORD indexes billions of messages? - https://youtu.be/CSnd5TlToIA
+3. How Discord handles millions of concurrent voice users? - https://youtu.be/mlBCfZfS9Uw
 
 
 ## System Design Concepts 
