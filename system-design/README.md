@@ -23,6 +23,7 @@ This series of videos will help you to grasp system design concepts. The course 
 2. How DISCORD indexes billions of messages? - https://youtu.be/CSnd5TlToIA
 3. How Discord handles millions of concurrent voice users? - https://youtu.be/mlBCfZfS9Uw
 4. Continue Watching + Hotstar deep dive - https://youtu.be/h5g6kfxcoaQ
+5. Discord Architecture - Notifications at scale - https://youtu.be/JwCbOeUul20
 
 
 ## System Design Concepts 
@@ -49,6 +50,7 @@ This series of videos will help you to grasp system design concepts. The course 
 21. Short Polling vs Long Polling vs Web Sockets - https://youtu.be/MpNX-1ApfC4
 22. Message Queues - https://youtu.be/m7aF88g36cM
 23. Functional vs Non-Functional requirements - https://youtu.be/s-IGmZyJr_k
+24. Blue green / canary deployments - https://youtu.be/WykqbCtUMG8
 
 
 ## Global Outages Discussion
