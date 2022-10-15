@@ -56,3 +56,8 @@ This series of videos will help you to grasp system design concepts. The course 
 ## Global Outages Discussion
 1. AWS Outage - https://youtu.be/q9c-ZtZ-HzY
 2. Atlassian Outage - https://youtu.be/MyyZw0QuCNo
+
+## Mystery of Time in Distributed Systems
+Playlist - https://www.youtube.com/watch?v=8wRnoAsIGDI&list=PLGPe9uvn5fMY_DZyjHPH-Hc2Rpq3FJzku
+1. Wall clocks and monotonic clocks - https://youtu.be/8wRnoAsIGDI
+2. 
