@@ -2,7 +2,7 @@
 Sharing my experiences to help around.
 
 ## YouTube Channel:
-[MsDeep Singh](https://www.youtube.com/channel/UC5GDb4oVOCxUESy0dZOieIw)
+[MsDeep Singh](https://www.youtube.com/c/MsDeepSingh/?sub_confirmation=1)
 
 ### Social Media links
 ##### :point_right: Instagram: https://www.instagram.com/msdeep14/
