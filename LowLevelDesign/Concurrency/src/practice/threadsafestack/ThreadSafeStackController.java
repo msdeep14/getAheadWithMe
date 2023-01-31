@@ -1,5 +1,8 @@
 package practice.threadsafestack;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class ThreadSafeStackController {
 
     public static class StackAddRunnableTest implements Runnable {
@@ -31,15 +34,15 @@ public class ThreadSafeStackController {
     public static void main(String[] args) throws InterruptedException {
         ThreadSafeStack<Integer> st = new ThreadSafeStack<>();
 
-        //some issues with the code thread-safety
-        //TODO: fix it
-        new Thread(new StackAddRunnableTest(1, st)).start();
-        new Thread(new StackAddRunnableTest(2, st)).start();
-        new Thread(new StackAddRunnableTest(3, st)).start();
-        new Thread(new StackPopRunnableTest(st)).start();
-        new Thread(new StackPopRunnableTest(st)).start();
-        new Thread(new StackPopRunnableTest(st)).start();
-        new Thread(new StackPopRunnableTest(st)).start();
+        ExecutorService service = Executors.newFixedThreadPool(2);
+        service.submit(new StackAddRunnableTest(1, st));
+        service.submit(new StackAddRunnableTest(2, st));
+        service.submit(new StackPopRunnableTest(st));
+        service.submit(new StackPopRunnableTest(st));
+        service.submit(new StackPopRunnableTest(st));
+        service.submit(new StackPopRunnableTest(st));
+
+        service.shutdown();
 
     }
 }

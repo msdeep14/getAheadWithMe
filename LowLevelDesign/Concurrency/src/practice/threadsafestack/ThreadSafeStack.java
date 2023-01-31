@@ -12,12 +12,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ThreadSafeStack<T> {
     private final Deque<T> dq;
     private final ReentrantLock lock;
-    Condition stackEmpty;
 
     public ThreadSafeStack() {
         this.dq = new LinkedList<>();
         this.lock = new ReentrantLock();
-        this.stackEmpty = lock.newCondition();
         System.out.println("Stack created successfully!!!");
     }
 
@@ -26,7 +24,6 @@ public class ThreadSafeStack<T> {
         try {
             System.out.println("Adding item: " + item);
             dq.addFirst(item);
-            stackEmpty.signalAll();
         } finally {
             lock.unlock();
         }
@@ -36,14 +33,9 @@ public class ThreadSafeStack<T> {
         lock.lock();
         try {
             if(dq.size() == 0) {
-                System.out.println("Stack is empty");
-                //wait for more items to be added to stack.
-                stackEmpty.await();
+                System.out.println("Stack is empty, no items to for pop");
             }
-            System.out.println("Removing item " + dq.pollFirst());
-            dq.removeFirst();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Removing item " + dq.removeFirst());
         } finally {
             lock.unlock();
         }
