@@ -30,10 +30,14 @@ For user-level thread, entire process is blocked if any of the user-level thread
 This is not the case with kernel-level thread, blocking operation by one kernel thread don't impact execution of another thread.
 
 ### Java Virtual Threads
-TBU
+1. Light-weight implementation of Java threads. 1 Java Thread == 1 OS thread, which is resource intensive.
+2. Virtual threads store their stack frames in Java's garbage-collected heap rather than in monolithic blocks of memory allocated by the operating system.
+3. A good read - [infoq article](https://www.infoq.com/articles/java-virtual-threads/).
 
 ### Deadlock
-A process/thread is in waiting state because it is waiting for a resource that is held by another process P2. P2 is waiting on another resource held by P3. P3 is waiting for another resource held by P1. All the processes are waiting on each other without being progressing eventually leading to deadlock situation.
+A process/thread is in waiting state because it is waiting for a resource that is held by another process P2. P2 is waiting on another 
+resource held by P3. P3 is waiting for another resource held by P1. All the processes are waiting on each other without being progressing 
+eventually leading to deadlock situation.
 
 **Deadlock conditions:** 
 All four conditions should satisfy for system to be in deadlock state -
@@ -44,10 +48,11 @@ All four conditions should satisfy for system to be in deadlock state -
 
 #### Deadlock Handling
 ##### Deadlock Prevention
-Don't let system to enter into deadlock state by avoiding any of the four conditions specified in above section.
+Don't let system enter into deadlock state by avoiding any of the four conditions specified in above section.
 
 ##### Deadlock Avoidance
-The resource request is analyzed before-hand to ensure it will not cause any deadlock situation in the future. To perform this analysis, it requires all the information in advance around how resources will be requested/used in future.
+The resource request is analyzed before-hand to ensure if it can cause any deadlock situations in the future. To perform this analysis, 
+it requires all the information in advance around how resources will be requested/used in the future.
 Deadlock avoidance algorithm - [Banker's algorithm](https://en.wikipedia.org/wiki/Banker%27s_algorithm).
 
 ##### Deadlock Detection
@@ -58,7 +63,9 @@ Deadlock avoidance algorithm - [Banker's algorithm](https://en.wikipedia.org/wik
 
 ### LiveLock
 The threads/processes are not blocked as in deadlock situation but the state keep on changing from one to another and not making any further progress.
-**Example:** Queue Message processing: Queue consumer failed with exception and it puts back to queue in hope that it will processed next time but it keeps on failing again and again with same exception(Specific to this example, solution could be to keep a upper limit on number of retries for specific failure if msgs are put into dead-letter queue. Failed msgs should anyway never be put in the same queue again for re-processing).
+**Example:** Queue Message processing: Queue consumer failed with exception and it puts back to queue in hope that it will processed next time but it
+keeps on failing again and again with same exception(Specific to this example, solution could be to keep a upper limit on number of retries for specific
+failure if msgs are put into dead-letter queue. Failed msgs should anyway never be put in the same queue again for re-processing).
 
 ### Starvation
 Process in on hold because resources are not allocated to it. This could happen if resources keep getting allocated to high priority threads and low priority threads keep on waiting.
@@ -79,23 +86,31 @@ Refer [SemaphoreImpl class](./src/semaphoremutex/SemaphoreImpl.java) for sample 
 2. The #1 can prove to be downside if mutex lock is not released as it can't be unlocked from different context than who acquired it leading to starvation.
 
 ### I/O Bound
-Application is referred as I/O bound if it involves reading/writing from/to input/output system and waiting for information. The main disadvantage of such applications could be the application can be spending too much time in I/O operations without doing any actual operations.
+Application is referred as I/O bound if it involves reading/writing from/to input/output system and waiting for information. 
+The main disadvantage of such applications could be the application can be spending too much time in I/O operations 
+without doing any actual operations.
 Example - upload/download files.
 
 ### Blocking I/O vs Non-Blocking I/O
 #### Blocking I/O
-The request waits for server to complete its processing. In general terms, the request will wait for read or write before returning back meaning the thread will be blocked state until there is data available for read or ongoing write operation is fully completed.
+The request waits for server to complete its processing. In general terms, the request will wait for read or write before 
+returning back meaning the thread will be blocked state until there is data available for read or ongoing write operation 
+is fully completed.
 
 Blocking I/O operations are available with java.io package.
 1. One byte data at a time - `InputSteam` and `OutputStream`
 2. Wrapper for streams - `Reader` and `Writer`.
 
 #### Non-Blocking I/O
-The request is executed immediately. There could be possibility that request is processed as soon as it is received, if there are no available threads 
-to process the request, the request is queued(to be processed at later point of time) and request is returned. Other way to look at is if there is ongoing write operation, the thread can perform any other operation.
+The request is executed immediately. There could be possibility that request is not processed as soon as it is received, if 
+there are no available threads to process the request, 
+the request is queued(to be processed at later point of time) and response is returned. 
+Other way to look at is if there is ongoing write operation, the thread can perform any other operation.
 
-In analogy to event-driven architecture, you can think of this scenario as communication between service A and service B. service A invokes service B API for some processing and gets a response that request is received by service B.
-Once the request processing completes by service B, it can publish an event to SNS topic(or Kafka topic) to which service A is subscribed. service A then perform any additional required processing.
+In analogy to event-driven architecture, you can think of this scenario as communication between service A and service B. 
+service A invokes service B API for some processing and gets a response that request is received by service B.
+Once the request processing completes by service B, it can publish an event to SNS topic(or Kafka topic) 
+to which service A is subscribed. service A can then perform any additional required processing basis Service B response.
 
 Non-Blocking I/O operations are available with java.nio package.
 1. Read chunks of data at a time - `Buffer`.
@@ -108,10 +123,12 @@ Task/process execution is dependent on CPU without requiring any I/O operations.
 Example - High Performance computing
 
 ### Thread-safe
-Thread-safe class means a class that can used by multiple threads concurrently without any issues.
+Thread-safe class/method/codeBlock means a class/method/codeBlock that can used by multiple threads concurrently without 
+any issues(example the output of threads should be same as they were processed sequentially).
 
 ### Volatile Keyword
-Volatile keyword is used inside a class to make it thread-safe. It can be used for any variable such as value of it can be modified by different threads at same time without any problem.
+Volatile keyword is used inside a class to make it thread-safe. It can be used for any variable such as value of it can be 
+modified by different threads at same time without any problem.
 1. It can be used for primitive or object types though it can't be used with classes/methods.
 2. Volatile keyword enforces to always read variable value from main memory and it is not cached. Both reads and writes will be atomic.
 3. Compiler don't perform any optimization and order of instructions is maintained.
@@ -123,11 +140,13 @@ thread B will still assume previous value of any variable.
 This can be solved by volatile keyword as volatile enforces to read always from 
 main memory and not from local thread cache.
 
-**NOTE 2-** volatile can be used to resolve visibility practice, prefer to use it for setting flag variables. For compound operations or counters, prefer AtomicInteger/AtomicLong.
+**NOTE 2-** volatile can be used to resolve visibility practice, prefer to use it for setting flag variables. 
+For compound operations or counters, prefer AtomicInteger/AtomicLong/AtomicReference.
 
 ### Atomic Integer
 `java.util.concurrent.atomic.AtomicInteger`.
-Refer the sample example and comparison of volatile, AtomicInteger and synchronized keyword in class [VolatileKeywordImpl](./src/volatilesample/VolatileKeywordImpl.java).
+Refer the sample example and comparison of volatile, AtomicInteger and synchronized keyword in 
+class [VolatileKeywordImpl](./src/volatilesample/VolatileKeywordImpl.java).
 
 Operations available with AtomicInteger - 
 1. incrementAndGet
@@ -146,7 +165,8 @@ Refer [SynchronizeSample class](./src/volatilesample/SynchronizeSample.java) for
 2. Synchronized keyword should not be used with constructors/variables.
 
 ### Locks
-Locks can be used to ensure single thread access the critical section at a time. Think of lock as a guard to critical section and this guard provides key to enter the critical section and while leaving critical section, handover this key back to guard.
+Locks can be used to ensure single thread access the critical section at a time. 
+Think of lock as a guard to critical section and this guard provides key to enter the critical section and while leaving critical section, handover this key back to guard.
 Java Lock is similar to synchronized block discussed in above section.
 
 #### Reentrant Locks
@@ -162,7 +182,8 @@ Java Lock is similar to synchronized block discussed in above section.
 Refer [LockSample class](./src/locksample/LockSample.java).
 
 #### ReadWrite Locks
-Reentrant locks can be inefficient if there are threads blocked which only want to read the state. ReadWriteLocks helps to optimize this kind of use-case.
+Reentrant locks can be inefficient if there are threads blocked which only want to read some data. 
+ReadWriteLocks helps to optimize this kind of use-case.
 1. Reentrant lock - one thread at a time.
 2. ReadWrite lock - one writer thread at a time **OR** multiple reader threads at a time. Key Point - Both read and write threads will not be given permission simultaneously, either one of them can execute at a time.
 3. ReadWrite lock can be efficient for use-cases which requires high number of reads and less writes in general.
@@ -170,9 +191,13 @@ Reentrant locks can be inefficient if there are threads blocked which only want 
 Refer [ReadWriteLock class](./src/locksample/ReadWriteLock.java).
 
 ### Optimistic and Pessimistic Locking
-**Pessimistic Locking-** Lock the object beforehand performing any operation. Java synchronized keyword is example of pessimistic locking. It has extra performance bottleneck as threads have to wait unless permitted to execute specific operation.
+**Pessimistic Locking-** Lock the object beforehand performing any operation. 
+Java synchronized keyword is example of pessimistic locking. 
+It has extra performance bottleneck as threads have to wait unless permitted to execute specific operation.
 
-**Optimistic Locking-** As name suggests, in this approach you can go ahead and execute the operation with assumption that no other thread will interfere. It relies on collision detection and handle if detected via retry/failure. Java CompareAndSwap is example of optimistic locking.
+**Optimistic Locking-** As name suggests, in this approach you can go ahead and execute the operation with assumption 
+that no other thread will interfere. It relies on collision detection and handle if detected via retry/failure. 
+Java CompareAndSwap is example of optimistic locking.
 
 
 ### Two-Phase Locking
@@ -182,30 +207,47 @@ Locking and unlocking has two phases -
 
 This ensures serializability but can cause deadlock, starvation and cascading rollback. 
 
-The last lock acquired in growing phase is referred as **Lock Point**. Lock Points are 
-used to define serializability, example basis lock point you can identify which transaction comes first in series of transactions.
+The last lock acquired in growing phase is referred as **Lock Point**. Lock Points are used to define serializability, 
+example basis lock point you can identify which transaction comes first in series of transactions.
 
 
 ### Phaser, CountDownLatch and CyclicBarrier
 Read more [here](https://www.oracle.com/technical-resources/articles/javase/concurrent-programming.html).
 
 #### CountDownLatch
-This is helpful in scenarios if there is requirement to initialize some piece of code before executing further system logic or other threads. Think of a scenario, where database connection to be established before other threads can actually carry out the db query operations.
+This is helpful in scenarios if there is requirement to initialize some piece of code before executing further system 
+logic or other threads. 
+Think of a scenario, where database connection to be established before other threads can actually carry out the db query operations.
 
 Refer [CountDownLatchSample class](./src/countDownLatchPhaserCyclicBarrier/CountDownLatchSample.java).
 
 #### CyclicBarrier
-Set of threads wait for each other to reach a common barrier point. and once common point is reached, then all the threads can carry forward their execution. 
+Set of threads wait for each other to reach a common barrier point. 
+and once common point is reached, then all the threads can carry forward their execution. 
 
-Why cyclic? The same barrier can be used again and again among the threads.
+**Why cyclic?** The same barrier can be used again and again among the threads.
 
 #### Phaser
-It is similar to CountDownLatch with some added functionalities. Phaser allows dynamic number of threads that needs to wait for continuing execution, in countDownLatch, we specific fixed number of parties upon initialization.
+It is similar to CountDownLatch with some added functionalities. 
+Phaser allows dynamic number of threads that needs to wait for continuing execution, in countDownLatch, 
+we specific fixed number of parties upon initialization.
 1. register() - party can register itself
 2. bulkRegister() - extra parties register in bulk
 3. arrive() - parties can arrive and continue
 4. arriveAndAwaitAdvance() - parties can arrive and await for other parties.
 5. arriveAndDeregister() - Parties can arrive, deregister and continue.
+
+### Conditions
+Take an example of Thread-1 and Thread-2.
+Thread-1 complete execution in two stages. Stage-1 and Stage-2. 
+Stage-1 is executed and the execution of State-2 is dependent on completion of Thread-2.
+In such scenarios, Thread-1 will put an additional condition `condition.await()` to put thread in blocked state. 
+Once Thread-2 execution is completed, it will run `condition.signal()` or `condition.signalAll()` and with this signal
+all the threads which are blocked on this condition will carry forward their execution.
+
+This is similar to `monitor.wait()` and `monitor.notify()` in synchronized code block.
+
+Refer [ConditionSample class](./src/locksample/ConditionSample.java).
 
 ### wait(), notify() and notifyAll()
 `wait()`, `notify()` and `notifyAll()` can be used in replacement of conditions. They can be applied on any java object.
@@ -213,17 +255,8 @@ It is similar to CountDownLatch with some added functionalities. Phaser allows d
 2. notify() - similar to myCondition.signal()
 3. notifyAll() - similar to myCondition.signalAll()
 
-Refer [MyBlockingQueue class](./src/practice/producerconsumer/lockCondition/MyBlockingQueue.java) and [MyBlockingQueue2 class](./src/practice/producerconsumer/waitNotify/MyBlockingQueue2.java) for sample examples.
-
-### Conditions
-Take an example of Thread-1 and Thread-2.
-Thread-1 complete execution in two stages. Stage-1 and Stage-2. Stage-1 is executed and the execution of State-2 is dependent on completion of Thead-2.
-In such scenarios, Thread-1 will put an additional condition `condition.await()` to put thread in blocked state. Once Thread-2 execution is completed, it will run `condition.signal()` and with this signal
-all the threads which are blocked on this condition will carry forward their execution.
-
-This is similar to `monitor.wait()` and `monitor.notify()` in synchronized code block. 
-
-Refer [ConditionSample class](./src/locksample/ConditionSample.java).
+Refer [MyBlockingQueue class](./src/practice/producerconsumer/lockCondition/MyBlockingQueue.java) 
+and [MyBlockingQueue2 class](./src/practice/producerconsumer/waitNotify/MyBlockingQueue2.java) for sample examples.
 
 ### ExecutorService
 `1 Java Thread == 1 OS Thread`
@@ -237,7 +270,8 @@ for(int i=0;i<1000;i++) {
 ```
 The above operation will be too expensive as 1000 threads are being created at the same time which could lead to system crash.
 
-To solve this problem, you can create a pool of threads and submits the large list of tasks to them. Now the tasks can be picked up as there are free threads present in the thread pool which are being maintained in a BlockingQueue.
+To solve this problem, you can create a pool of threads and submits the large list of tasks to them. 
+Now the tasks can be picked up as there are free threads present in the thread pool which are being maintained in a BlockingQueue.
 
 Example - ThreadPool size = 10, even though submitted task size = 1000, the system will execute max 10 tasks at a time.
 ```agsl
@@ -257,14 +291,15 @@ Example - ThreadPool size = 10, even though submitted task size = 1000, the syst
 1. FixedThreadPool - initialize thread pool with fixed number of threads.
 2. CachedThreadPool - tasks are held in synchronous queue. It will check if there are already available free threads, if yes then use one from available else create a new thread and assign task to it. This threadPool kills the idle threads with lifecycle more than 60 seconds.
 3. ScheduledThreadPool - tasks that are required to be submitted after certain delay or require scheduling. It stores the tasks in delayQueue which stores tasks basis when these tasks should be executed(priority order is basis that).
-   1. service.schedule(Runnable, 10, SECONDS)
-   2. service.scheduleAtFixedRate(Runnable, 15, 10, SECONDS)
-   3. service.scheduleAtFixedDelay(Runnable, 15, 10, TimeUnit.SECONDS)
+   1. service.schedule(Runnable, delay:10, SECONDS). Task will be enabled after 10 seconds.
+   2. service.scheduleAtFixedRate(Runnable, initialDelay:15, period:10, SECONDS). First task will start after 15 seconds. Subsequent tasks will execute at initialDelay+period, then initialDelay+2*period, and so on...
+   3. service.scheduleAtFixedDelay(Runnable, initialDelay:15, delay:10, TimeUnit.SECONDS). First task will start after 15 seconds. Once this is completed, second will start after 10 seconds of 1st task completion.
 4. SingleThreadedExecutor - similar to FixedThreadPool with `numThreads=1`
 
 #### Future
 1. Placeholder for value that will arrive sometime in the future.
-2. To get actual response of `submit()`, use `future.get()`. get() is blocking operation - it will wait until the thread result is returned. We can use `future.get(1000, TimeUnit.MILLISECONDS)` to specify a timeout value for it to be blocked state if result is not available.
+2. To get actual response of `submit()`, use `future.get()`. 
+3. get() is blocking operation - it will wait until the thread result is returned. We can use `future.get(1000, TimeUnit.MILLISECONDS)` to specify a timeout value for it to be blocked state if result is not available.
 
 #### Runnable vs Callable
 Runnable return type is void whereas Callable can return a value.
@@ -302,13 +337,17 @@ As the name suggests, ForkJoin consists of two operations -
 
 **Per-thread queuing -** Each thread has their own deque, so all the sub-tasks will be part of this deque.
 
-**Work-Stealing algorithm** Take a scenario of two threads, Thread-1 and Thread-2. In a scenario where Thread-1 created large number of sub-tasks and Thread-2 has very less number of sub-tasks. Once Thread-2 completes its subtasks, it will subtasks from Thread-1(from other end of the queue) to help out in processing of subtasks. In simple terms, available threads take up tasks from busy threads.
+**Work-Stealing algorithm** Take a scenario of two threads, Thread-1 and Thread-2. In a scenario where Thread-1 created 
+large number of sub-tasks and Thread-2 has very less number of sub-tasks. 
+Once Thread-2 completes its subtasks, it will subtasks from Thread-1(from other end of the queue) to help out in processing of subtasks. 
+In simple terms, available threads take up tasks from busy threads.
 
 ### Synchronous Queue
 Synchronous queue is similar to blocking queue with size=1. Refer producer-consumer example to understand about blocking queue.
 
 so why do we need a queue with size=1?
-> There is direct handoff between producer and consumer. The item is not moved to queue. The producer will not be allowed to put item into queue even though the queue is empty. The producer is only allowed to put item to queue once consumer requests for item.
+> There is direct handoff between producer and consumer. The item is not moved to queue. The producer will not be allowed 
+> to put item into queue even though the queue is empty. The producer is only allowed to put item to queue once consumer requests for item.
 > Well, technically item is not put into the queue. The item is passed on once consumer thread requests for it.
 
 ### Thread-safe Singleton pattern
@@ -319,10 +358,11 @@ Refer [ThreadSafeSingleton class](./src/practice/threadsafesingleton/ThreadSafeS
 When collection is modified when already an operation is going on. Example, iterating over the list and at the same time removing of an element.
 
 ### Event Loop
-
+TBU
 
 ### Monitors
-Monitors are nothing but implementation of `synchronized` keyword in JAVA. Monitor is an abstraction that helps to achieve mutual exclusion between multiple threads trying to access a resource concurrently.
+Monitors are nothing but implementation of `synchronized` keyword in JAVA. Monitor is an abstraction that helps to 
+achieve mutual exclusion between multiple threads trying to access a resource concurrently.
 
 Additionally in JAVA, any object can act as a monitor utilizing `wait()` and `notify()` methods.
 Refer [MyBlockingQueue2 class](./src/practice/producerconsumer/waitNotify/MyBlockingQueue2.java) for example.

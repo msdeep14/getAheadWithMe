@@ -19,7 +19,7 @@ public class ExecutorCompletionServiceSample {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService service = Executors.newFixedThreadPool(5);
-        CompletionService<String> executorCompletionService = new ExecutorCompletionService<>(service);
+        ExecutorCompletionService<String> executorCompletionService = new ExecutorCompletionService<>(service);
         ArrayList<Future<String>> futureList = new ArrayList<>();
         futureList.add(executorCompletionService.submit(new CallableTest("Task#100")));
         futureList.add(executorCompletionService.submit(new CallableTest("Task#101")));

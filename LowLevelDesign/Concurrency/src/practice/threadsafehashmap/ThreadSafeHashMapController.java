@@ -1,5 +1,7 @@
 package practice.threadsafehashmap;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.*;
 
 /**
@@ -36,7 +38,7 @@ public class ThreadSafeHashMapController {
         }
     }
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
         ThreadSafeHashMap<Integer, Integer> hashMap = new ThreadSafeHashMap<>();
 //        hashMap.put(1,5);
 //        hashMap.put(4,10);
@@ -51,7 +53,12 @@ public class ThreadSafeHashMapController {
         service.submit(new PutRunnableHashMap<>(1,5,hashMap));
         service.submit(new PutRunnableHashMap<>(4,10,hashMap));
         Future<Integer> res = service.submit(new GetCallableHashMap<>(1,hashMap));
-        System.out.println("Value for key(1):" + res.get());
+        //System.out.println("Value for key(1):" + res.get());
+        Integer val = res.get();
+
+        FileWriter fileWriter = new FileWriter("/home/mandeep/Documents/getAheadWithMe/LowLevelDesign/Concurrency/src/practice/threadsafehashmap/sample.txt");
+        fileWriter.write(val);
+        fileWriter.close();
 
         service.shutdown();
     }

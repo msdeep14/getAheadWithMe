@@ -1,20 +1,20 @@
 package practice.producerconsumer.lockCondition;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class ProducerConsumerController2 {
 
     public static void main(String[] args) {
         MyBlockingQueue<String> myBlockingQueue = new MyBlockingQueue<>(10);
 
-        // System.out.println("Produce some tasks");
-        new Thread(new Producer2(myBlockingQueue, "myTask1")).start();
-        new Thread(new Producer2(myBlockingQueue, "myTask2")).start();
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        service.submit(new Producer2(myBlockingQueue, "myTask1"));
+        service.submit(new Producer2(myBlockingQueue, "myTask2"));
+        service.submit(new Consumer2(myBlockingQueue));
+        service.submit(new Consumer2(myBlockingQueue));
+        service.submit(new Consumer2(myBlockingQueue));
 
-        // System.out.println("Consume some tasks");
-        new Thread(new Consumer2(myBlockingQueue)).start();
-        new Thread(new Consumer2(myBlockingQueue)).start();
-
-        //Trying to remove some non-existent tasks
-        //thread will go to blocked state.
-        new Thread(new Consumer2(myBlockingQueue)).start();
+        service.shutdown();
     }
 }

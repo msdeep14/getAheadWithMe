@@ -3,9 +3,9 @@ package locksample;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteLock {
-    private ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
-    private ReentrantReadWriteLock.ReadLock readLock = lock.readLock();
-    private ReentrantReadWriteLock.WriteLock writeLock = lock.writeLock();
+    private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+    private final ReentrantReadWriteLock.ReadLock readLock = lock.readLock();
+    private final ReentrantReadWriteLock.WriteLock writeLock = lock.writeLock();
 
     private void readState() {
         readLock.lock();

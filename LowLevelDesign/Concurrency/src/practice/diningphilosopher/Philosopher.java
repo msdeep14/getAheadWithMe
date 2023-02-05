@@ -18,7 +18,6 @@ public class Philosopher implements Runnable {
 
         Thread.sleep(sleepTime);
         System.out.println(action + "  action performed by Philosopher " + philosopherNumber + " for time: "+ sleepTime);
-        //Thread.sleep(1000);
     }
 
     @Override
@@ -41,7 +40,7 @@ public class Philosopher implements Runnable {
         } catch (Exception e) {
             Thread.currentThread().interrupt();
             System.out.println("Exception occurred on Philosopher run method: " + e);
-            return;
+            throw new RuntimeException("Exception encountered: " + e);
         }
     }
 }
