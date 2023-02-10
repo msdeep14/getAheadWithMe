@@ -20,6 +20,7 @@ public class MainController {
     }
 
     public static void main(String[] args) {
+        //Integer cores = Runtime.getRuntime().availableProcessors();
         ScheduledExecutorServiceImpl service = new ScheduledExecutorServiceImpl(5);
         Runnable task1 = getRunnableTask("task#1");
         service.schedule(task1, 1, TimeUnit.SECONDS);

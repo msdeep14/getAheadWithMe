@@ -1,5 +1,7 @@
 # CONCURRENCY CONCEPTS
-Concepts around multi-threading, concurrency and parallelism. 
+Concepts around multi-threading, concurrency and parallelism.
+
+### Subscribe to [YouTube channel - @MsDeepSingh](https://www.youtube.com/@MsDeepSingh) for more such content around System Design, Distributed Systems and Cloud.
 
 NOTE --
 1. Few of the concepts can be specific to JAVA.
@@ -148,6 +150,10 @@ For compound operations or counters, prefer AtomicInteger/AtomicLong/AtomicRefer
 Refer the sample example and comparison of volatile, AtomicInteger and synchronized keyword in 
 class [VolatileKeywordImpl](./src/volatilesample/VolatileKeywordImpl.java).
 
+```agsl
+AtomicInteger count = new AtomicInteger(1);
+```
+
 Operations available with AtomicInteger - 
 1. incrementAndGet
 2. decrementAndGet
@@ -176,7 +182,7 @@ Java Lock is similar to synchronized block discussed in above section.
 2. You can acquire the lock in one method and release in another method. There is no such flexibility in synchronized keyword.
 3. tryLock() method with Locks which can be used to check if lock is available. 
 4. ReentrantLocks allows to call lock.lock() multiple times without calling unlock(). Finally you can unlock() for the number of times lock() was called. `getHoldCount()` can be used to check how many times to lock() is called.
-5. To make the lock fair, use `lock = new ReentrantLock(true)`. This ensure longest waiting thread gets the lock. Fair locks can be little slower as we extra queue needs to be maintained based ageing. Unfair lock could be faster but it can potentially lead to thread starvation in some cases.
+5. To make the lock fair, use `lock = new ReentrantLock(true)`. This ensures that longest waiting thread gets the lock. Fair locks can be little slower as an extra queue needs to be maintained based ageing. Unfair lock could be faster, but it can potentially lead to thread starvation in some cases.
 6. tryLock() doesn't honor lock fairness. To make it fair, use `lock.tryLock(0, TimeUnit.SECONDS)`.
 
 Refer [LockSample class](./src/locksample/LockSample.java).
@@ -191,11 +197,11 @@ ReadWriteLocks helps to optimize this kind of use-case.
 Refer [ReadWriteLock class](./src/locksample/ReadWriteLock.java).
 
 ### Optimistic and Pessimistic Locking
-**Pessimistic Locking-** Lock the object beforehand performing any operation. 
+**Pessimistic Locking -** Lock the object beforehand performing any operation. 
 Java synchronized keyword is example of pessimistic locking. 
 It has extra performance bottleneck as threads have to wait unless permitted to execute specific operation.
 
-**Optimistic Locking-** As name suggests, in this approach you can go ahead and execute the operation with assumption 
+**Optimistic Locking -** As name suggests, in this approach you can go ahead and execute the operation with assumption 
 that no other thread will interfere. It relies on collision detection and handle if detected via retry/failure. 
 Java CompareAndSwap is example of optimistic locking.
 
@@ -282,10 +288,10 @@ Example - ThreadPool size = 10, even though submitted task size = 1000, the syst
 ```
 
 #### submit() vs execute()
-| **submit()**                         | **execute()**                             |
-|--------------------------------------|-------------------------------------------|
-| return type is Future                | return type is void                       |
-| Runnable task can be passed as input | Both Runnable and Callable can be passed. |
+| **submit()**                             | **execute()**                          |
+|------------------------------------------|----------------------------------------|
+| return type is Future                    | return type is void                    |
+| Both Runnable and Callable can be passed | Runnable task can be passed as input   |
 
 #### ThreadPool Types
 1. FixedThreadPool - initialize thread pool with fixed number of threads.

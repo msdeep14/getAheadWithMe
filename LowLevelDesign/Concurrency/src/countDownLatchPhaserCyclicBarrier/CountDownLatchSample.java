@@ -3,7 +3,7 @@ package countDownLatchPhaserCyclicBarrier;
 import java.util.concurrent.CountDownLatch;
 
 public class CountDownLatchSample {
-    private CountDownLatch countDownLatch;
+    private final CountDownLatch countDownLatch;
 
     CountDownLatchSample(CountDownLatch latch) {
         this.countDownLatch = latch;

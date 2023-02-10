@@ -3,7 +3,7 @@ package nullobjectpattern;
 public class NoAnimal extends Animal {
     @Override
     public void eat() {
-        System.out.println("Animal bhag gya ghar se, skipping");
+        System.out.println("Animal bhag gya ghar se, animal likes bahar ka khana");
     }
 
     @Override

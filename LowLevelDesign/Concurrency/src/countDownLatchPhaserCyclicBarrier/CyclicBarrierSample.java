@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 public class CyclicBarrierSample {
 
     public static class MyTask implements Runnable {
-        private CyclicBarrier cyclicBarrier;
+        private final CyclicBarrier cyclicBarrier;
         MyTask(CyclicBarrier cyclicBarrier) {
             this.cyclicBarrier = cyclicBarrier;
         }

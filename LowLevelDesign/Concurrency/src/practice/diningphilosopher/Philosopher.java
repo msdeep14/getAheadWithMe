@@ -26,6 +26,14 @@ public class Philosopher implements Runnable {
             while(true) {
                 //thinking
                 performAction("Thinking", philosopherNumber);
+                /**
+                 * You can also use locks instead of synchronized keyword --> can be an ask in interviews
+                 *
+                 * Lock leftLock = new ReentrantLock();
+                 * Lock rightLock = new ReentrantLock();
+                 *
+                 *
+                 * */
                 synchronized (leftFork) {
                     performAction("Pick up left fork", philosopherNumber);
                     synchronized (rightFork) {

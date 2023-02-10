@@ -1,7 +1,7 @@
 package builderPattern;
 
 /**
- * Helps setting up complex object.
+ * Help setting values in complex object.
  *
  * Example - Object with 10 optional attributes. This way object can be created with any number of attributes.
  * You'll need multiple constructor basis attributes that are passed while initializing new object of this class.
