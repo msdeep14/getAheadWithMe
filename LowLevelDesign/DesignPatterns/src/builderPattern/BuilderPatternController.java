@@ -11,8 +11,10 @@ package builderPattern;
 public class BuilderPatternController {
     public static void main(String[] args) {
         /**
-         * An intermediate class called 'Director' can also be created between Builder class and invocation client(in this case - main() method).
-         * If Creation is too complex - example scenarios where RoomBuilder is abstract and provide additional method overrides such as
+         * An intermediate class called 'Director' can also be created between Builder class
+         * and invocation client(in this case - main() method).
+         * If Creation is too complex - example scenarios where RoomBuilder is abstract
+         * and provide additional method overrides such as
          * Builder as per room Type, etc.
          * */
         Room myRoom = new RoomBuilder()
