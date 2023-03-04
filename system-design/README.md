@@ -1,5 +1,5 @@
-# SYSTEM DESIGN WITH msdeep
-This series of videos will help you to grasp system design concepts. The course is structured to start from basic system design concepts and then move towards how will you design advanced real life systems.
+# SYSTEM DESIGN - Launch Systems @Scale
+The playlist starts from basic System Design concepts and then move towards real life sytem design and deep dive into existing systems operating at scale.
 
 ## Resources 
 1. YT channel - https://www.youtube.com/c/MsDeepSingh
@@ -17,6 +17,8 @@ This series of videos will help you to grasp system design concepts. The course 
 9. Stackoverflow | Q&A website - https://youtu.be/qJf7UZOx-7k
 10. Google Calendar - https://youtu.be/EYOuYQWPgvM
 11. TrueCaller - https://youtu.be/oAz29Pukv2E
+12. WhatsApp - https://youtu.be/KrLq7-LEhXw
+13. Google Drive - https://youtu.be/DTyxuDezwts
 
 ## Large Scale System Analysis
 1. How DISCORD stores billions of messages? - https://youtu.be/EGHfvV_cLKQ
@@ -51,13 +53,21 @@ This series of videos will help you to grasp system design concepts. The course 
 22. Message Queues - https://youtu.be/m7aF88g36cM
 23. Functional vs Non-Functional requirements - https://youtu.be/s-IGmZyJr_k
 24. Blue green / canary deployments - https://youtu.be/WykqbCtUMG8
+25. Capacity Planning and Envelope Estimations - https://youtu.be/i6gQtBvasSQ
+26. Timeout, Retries and Backoff with Jitter - https://youtu.be/HZdE1dNLX9s
 
+## Dynamo Architecture
+1. https://youtu.be/GJZbDwDFP4Y
+2. https://youtu.be/7rMJftRsb_o
+3. https://youtu.be/WguZV6rzqyc
 
 ## Global Outages Discussion
 1. AWS Outage - https://youtu.be/q9c-ZtZ-HzY
 2. Atlassian Outage - https://youtu.be/MyyZw0QuCNo
+3. Cloudflare DNS Outage - https://youtu.be/Gew315hgSso
 
 ## Mystery of Time in Distributed Systems
 Playlist - https://www.youtube.com/watch?v=8wRnoAsIGDI&list=PLGPe9uvn5fMY_DZyjHPH-Hc2Rpq3FJzku
 1. Wall clocks and monotonic clocks - https://youtu.be/8wRnoAsIGDI
-2. 
+2. Logical Clocks - https://youtu.be/ORfRgsIjHPk
+3. Why Cassandra doesn't need vector clocks? - https://youtu.be/kNFYEjSa4mk
