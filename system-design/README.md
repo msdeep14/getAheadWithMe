@@ -2,8 +2,9 @@
 The playlist starts from basic System Design concepts and then move towards real life sytem design and deep dive into existing systems operating at scale.
 
 ## Resources 
-1. YT channel - https://www.youtube.com/c/MsDeepSingh
-2. system Design playlist - https://www.youtube.com/watch?v=3fUKlzhk398&list=PLGPe9uvn5fMZ1mA6jPbOnRQj8-45zGJfn
+1. YT channel [@MsDeepSingh](https://www.youtube.com/c/MsDeepSingh)
+2. [System Design playlist](https://www.youtube.com/watch?v=3fUKlzhk398&list=PLGPe9uvn5fMZ1mA6jPbOnRQj8-45zGJfn)
+3. O'Reilly book [System Design on AWS](https://oreillymedia.pxf.io/c/5915786/2322629/15173)
 
 ## Real-time System Designs
 1. Netflix - How new content is onboarded? - https://youtu.be/yFGkmymUGLE
